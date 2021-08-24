@@ -1,0 +1,145 @@
+main {
+  font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
+}
+
+header{
+  background-color: #5c7aff;
+  display: flex;
+  /* align-items: flex-end; */
+}
+
+.smart-icon {
+  width: 50%;
+  font-size: 60px;
+  color : white;
+  padding-left: 20px;
+}
+
+.nav {
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.list-right {
+  list-style: none;
+  display: flex;
+  /* justify-content: flex-end; */
+}
+
+.login {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px; 
+}
+
+.sign-up {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px; 
+}
+
+.title-contents {
+  background-image: url("images/4864263_m.jpg");
+  background-position:center center;  
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  /* padding-top: 66%; 画面の高さ÷画面の幅×100 */
+}
+
+.three-features {
+  background-color: #fcf9ee;
+}
+
+.feature-lists {
+  display: flex;
+  justify-content: space-around;
+}
+
+.news {
+  text-align: center;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.list-pict {
+  border-radius: 10px; /*角丸指定*/
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  margin-top: 40px;
+}
+
+.three-feature-texts {
+  list-style-type: none;
+  background-color: #fcf9ee;
+  display: flex;
+  justify-content: space-around;
+  line-height: 0;
+}
+
+.feature-list-text {
+  color: #333333;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.contents {
+  color: #5c7aff;
+  font-size: 36px;
+  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.quiz {
+  color: #ffbf69;
+  font-size: 24px;
+  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+}
+
+.quiz-lists {
+  list-style-type: none;
+}
+
+.quiz-list {
+  text-decoration: none;
+}
+
+.print {
+  color: #ffbf69;
+  font-size: 24px;
+  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+}
+
+.print-lists {
+  list-style-type: none;
+}
+
+.print-list {
+  text-decoration: none;
+}
+
+.information-ex {
+  color: #ffbf69;
+  font-size: 24px;
+  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+}
+
+.post {
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.footer-contents {
+  background-color: #efe2a9;
+  height: 30px;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
