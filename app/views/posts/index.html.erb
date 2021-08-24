@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>smart_class</title>
+    <link rel="stylesheet" href="style-top.css">
+  </head>
+  <body>
+    <header class="top-page-header">
+      <div class="smart-icon">Smart Class
+      </div>
+      <div class="nav">
+        <ul class="list-right">
+          <% if user_signed_in? %>
+            <li><%= link_to current_user.name, "#", class: "user-name" %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+          <% else %>
+            <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+            <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </header>
+
+    <div class="main">
+      <div class='title-contents'>
+        <h2 class='service-title'>
+          <span class="font-big">考える力</span>ぐんぐん伸びる!?
+        </h2>
+        <p class='service-explain'>
+          気軽にクイズにチャレンジ!!!
+        </p>
+        <p class='service-explain'>
+          プリントDL無制限!!!
+        </p>
+      </div>
+
+      <p class="news">
+        news 新規サイトOPEN! -2021.08.21
+      </p>
+
+      <div class="three-features">
+        <!-- <p class="news">
+          news 新規サイトOPEN! -2021.08.21
+        </p> -->
+        <ul class="feature-lists">
+          <li class="list">
+            <img class="list-pict" src="images/3315601_s.jpg" alt="イメージ写真">
+          </li>
+          <!-- <h3 class="feature-list-text">考える</h3> -->
+        <!-- </ul> -->
+        <!-- <ul class="feature-lists"> -->
+          <li class="list">
+            <img class="list-pict" src="images/4170205_s.jpg" alt="イメージ写真">
+          </li>
+          <!-- <h3 class="feature-list-text">復習する</h3> -->
+        <!-- </ul> -->
+        <!-- <ul class="feature-lists"> -->
+          <li class="list">
+            <img class="list-pict" src="images/2550975_s.jpg" alt="イメージ写真">
+          </li>
+          <!-- <h3 class="feature-list-text">わかる！</h3> -->
+        <!-- </ul> -->
+        </ul>
+        <ul class="three-feature-texts">
+          <li><h3 class="feature-list-text">考える</h3></li>
+          <li><h3 class="feature-list-text">復習する</h3></li>
+          <li><h3 class="feature-list-text">わかる！</h3></li>
+        </ul>
+      </div>
+
+      <div class="contents">CONTENTS
+      </div>
+      <h3 class="quiz">選択クイズ</h3>
+      <ul class="quiz-lists">
+        <li>
+          <a class="quiz-list" href="#">クイズその１</a>
+        </li>
+        <li>
+          <a class="quiz-list" href="#">クイズその２</a>
+        </li>
+      </ul>
+      
+      <h3 class="print">プリントダウンロード</h3>
+      <ul class="print-lists">
+        <li>
+          <a class="print-list" href="#">きまりの問題</a>
+        </li>
+        <li>
+          <a class="print-list" href="#">同じ重さにしよう</a>
+        </li>
+      </ul>
+      <h3 class="information-ex">情報POST</h3>
+          <%= link_to "投稿ページへ", new_post_path, class: "post" %>
+      <div class='footer'>
+        <p class='footer-contents'>
+          SMART CLASS 2021
+        </p>
+    </div>
+    <!-- <script src=""></script> -->
+  </body>
+</html>
