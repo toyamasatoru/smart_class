@@ -6,21 +6,6 @@
     <link rel="stylesheet" href="style-top.css">
   </head>
   <body>
-    <header class="top-page-header">
-      <div class="smart-icon">Smart Class
-      </div>
-      <div class="nav">
-        <ul class="list-right">
-          <% if user_signed_in? %>
-            <li><%= link_to current_user.name, "#", class: "user-name" %></li>
-            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-          <% else %>
-            <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-            <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-          <% end %>
-        </ul>
-      </div>
-    </header>
 
     <div class="main">
       <div class='title-contents'>
@@ -91,12 +76,27 @@
         </li>
       </ul>
       <h3 class="information-ex">情報POST</h3>
-          <%= link_to "投稿ページへ", new_post_path, class: "post" %>
-      <div class='footer'>
-        <p class='footer-contents'>
-          SMART CLASS 2021
-        </p>
-    </div>
+          <%= link_to "新規投稿ページへ", new_post_path, class: "post-page" %>
+          <% @posts.each do |post| %>
+            <div class="post">
+                <div class="post-date">
+                  投稿日時：<%= post.created_at.strftime('%Y/%m/%d') %>
+                </div>
+                <div class="post-content">
+                  <%= post.text %>
+                </div>
+                <ul class="choose-list">
+                  <% if user_signed_in? && current_user.id == post.user_id %>
+                    <li>
+                      <%= link_to image_tag("destroy.png", class: "destroy-btn"), post_path(post.id), method: :delete, data: {confirm: '削除しますか？'} %>
+                    </li>
+                    <li>
+                      <%= link_to image_tag("edit.png", class: "edit-btn"), edit_post_path(post.id) %>
+                    </li>
+                  <% end %>
+                </ul>
+            </div>
+          <% end %>
     <!-- <script src=""></script> -->
   </body>
 </html>
