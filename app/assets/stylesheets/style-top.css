@@ -40,6 +40,18 @@ header{
   margin-right: 20px; 
 }
 
+.user-name {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px; 
+}
+
+.logout {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px; 
+}
+
 .title-contents {
   background-image: url("images/4864263_m.jpg");
   background-position:center center;  
@@ -87,6 +99,7 @@ header{
   color: #333333;
   font-size: 24px;
   padding-bottom: 20px;
+  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
 }
 
 .contents {
@@ -131,7 +144,7 @@ header{
   font-family: "ヒラギノ丸ゴ ProN", sans-serif;
 }
 
-.post {
+.post-page {
   text-decoration: none;
   margin-left: 40px;
 }
@@ -142,4 +155,47 @@ header{
   color: #ffffff;
   text-align: center;
   padding: 20px;
+}
+
+.post{
+  border: 1px solid;
+  width: 80%;
+  height: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.post-date{
+  color: gray;
+}
+
+.post-content {
+  color: #333333;
+}
+
+.choose-list {
+  /* background-color: red; */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  /* display: inline-block; */
+  /* justify-content: flex-end; */
+}
+
+.destroy-btn {
+  /* background-color: red; */
+  width: 15%;
+  height: auto;
+  padding-top: 5px;
+}
+
+.edit-btn {
+  /* background-color: red; */
+  width: 15%;
+  height: auto;
+  padding-top: 5px;
 }
