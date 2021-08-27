@@ -5,8 +5,8 @@
     <title>smart_class</title>
     <%# <%= link_to image_tag("title_font.png", class: "title-btn"), root_path %>
   </head>
-  <body>
 
+  <body>
     <div class="main">
       <div class='title-contents'>
         <h2 class='service-title'>
@@ -85,8 +85,10 @@
           <% end %>
           <% @posts.each do |post| %>
             <div class="post">
+              <span class="post-user-name">
+                <%= post.user.name %>
                 <div class="post-date">
-                  投稿日時：<%= post.created_at.strftime('%Y/%m/%d') %>
+                  Posted date：<%= post.created_at.strftime('%Y/%m/%d') %>
                 </div>
                 <div class="post-content">
                   <%= raw Rinku.auto_link(post.text, :all, 'target="_blank"') %>
@@ -95,10 +97,16 @@
                 <ul class="choose-list">
                   <% if user_signed_in? && current_user.id == post.user_id %>
                     <li>
-                      <%= link_to image_tag("edit.png", class: "edit-btn"), edit_post_path(post.id) %>
+                      <%# <%= link_to image_tag("edit.png", class: "edit-btn"), edit_post_path(post.id) %>
+                      <%= link_to edit_post_path(post.id), class: "ed", method: :get do%>
+                        <div class="far fa-edit edit-btn"></div>
+                      <% end %>
                     </li>
                     <li>
-                      <%= link_to image_tag("destroy.png", class: "destroy-btn"), post_path(post.id), method: :delete, data: {confirm: '削除しますか？'} %>
+                      <%# <%= link_to image_tag("destroy.png", class: "destroy-btn"), post_path(post.id), method: :delete, data: {confirm: '削除しますか？'} %>
+                      <%= link_to post_path(post.id), class: "de", method: :delete, data: {confirm: '削除しますか？'} do%>
+                        <div class="far fa-trash-alt destroy-btn"></div>
+                      <% end %>
                     </li>
                   <% end %>
                 </ul>

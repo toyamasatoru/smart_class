@@ -173,7 +173,7 @@ header{
 .post{
   border: 1px solid;
   width: 80%;
-  height: 50px;
+  height: 80px;
   margin-top: 30px;
   margin-bottom: 30px;
   padding-left: 10px;
@@ -182,10 +182,19 @@ header{
 
 .post-date{
   color: gray;
+  font-size: 8px;
+}
+
+.post-user-name {
+  color: #5c7aff;
+  font-size: 16px;
+  margin-bottom: 3px;
 }
 
 .post-content {
   color: #333333;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 .choose-list {
@@ -199,16 +208,30 @@ header{
   /* justify-content: flex-end; */
 }
 
-.destroy-btn {
-  /* background-color: red; */
+/* .destroy-btn {
+  background-color: red;
   width: 15%;
   height: auto;
   padding-top: 5px;
 }
 
 .edit-btn {
-  /* background-color: red; */
+  background-color: red;
   width: 15%;
   height: auto;
   padding-top: 5px;
+} */
+
+.edit-btn {
+  font-size: 1.5em;
+  color: #efe2a9;
+  padding-top: 10px;
+}
+
+.destroy-btn {
+  font-size: 1.5em;
+  color: lightgray;
+  padding-top: 10px;
+  margin-left: 20px;
+  margin-right: 10px;
 }
