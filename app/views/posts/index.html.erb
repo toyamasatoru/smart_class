@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <title>smart_class</title>
-    <link rel="stylesheet" href="style-top.css">
+    <%# <%= link_to image_tag("title_font.png", class: "title-btn"), root_path %>
   </head>
-  <body>
 
+  <body>
     <div class="main">
       <div class='title-contents'>
         <h2 class='service-title'>
@@ -30,19 +30,19 @@
         </p> -->
         <ul class="feature-lists">
           <li class="list">
-            <img class="list-pict" src="images/3315601_s.jpg" alt="イメージ写真">
+            <%= link_to image_tag("3315601_s.jpg", class:"list-pict") %>
           </li>
           <!-- <h3 class="feature-list-text">考える</h3> -->
         <!-- </ul> -->
         <!-- <ul class="feature-lists"> -->
           <li class="list">
-            <img class="list-pict" src="images/4170205_s.jpg" alt="イメージ写真">
+            <%= link_to image_tag("4170205_s.jpg", class:"list-pict") %>
           </li>
           <!-- <h3 class="feature-list-text">復習する</h3> -->
         <!-- </ul> -->
         <!-- <ul class="feature-lists"> -->
           <li class="list">
-            <img class="list-pict" src="images/2550975_s.jpg" alt="イメージ写真">
+            <%= link_to image_tag("2550975_s.jpg", class:"list-pict") %>
           </li>
           <!-- <h3 class="feature-list-text">わかる！</h3> -->
         <!-- </ul> -->
@@ -59,7 +59,7 @@
       <h3 class="quiz">選択クイズ</h3>
       <ul class="quiz-lists">
         <li>
-          <a class="quiz-list" href="#">クイズその１</a>
+          <a class="quiz-list" href="/Users/satorutooyama/original/smart_class/app/javascript/quiz_test.html">クイズその１</a>
         </li>
         <li>
           <a class="quiz-list" href="#">クイズその２</a>
@@ -69,29 +69,44 @@
       <h3 class="print">プリントダウンロード</h3>
       <ul class="print-lists">
         <li>
-          <a class="print-list" href="#">きまりの問題</a>
+          <%# <a class="print-list" href="#">きまりの問題</a> %>
+          <%= link_to 'きそくを考えよう', '/regularity1.pdf', target: :_blank %>
         </li>
         <li>
-          <a class="print-list" href="#">同じ重さにしよう</a>
+          <%# <a class="print-list" href="#">同じ重さにしよう</a> %>
+          <%= link_to '同じ重さにしよう', '/same_game1.pdf', target: :_blank %>
         </li>
       </ul>
       <h3 class="information-ex">情報POST</h3>
-          <%= link_to "新規投稿ページへ", new_post_path, class: "post-page" %>
+          <% if user_signed_in? %>
+            <%= link_to "新規投稿ページへ", new_post_path, class: "post-page" %>
+          <% else %>
+            <%= link_to "新規投稿ページへは、まずログイン", new_user_session_path, class: "post-page" %>
+          <% end %>
           <% @posts.each do |post| %>
             <div class="post">
+              <span class="post-user-name">
+                <%= post.user.name %>
                 <div class="post-date">
-                  投稿日時：<%= post.created_at.strftime('%Y/%m/%d') %>
+                  Posted date：<%= post.created_at.strftime('%Y/%m/%d') %>
                 </div>
                 <div class="post-content">
-                  <%= post.text %>
+                  <%= raw Rinku.auto_link(post.text, :all, 'target="_blank"') %>
+                  <%# <%= post.text %>
                 </div>
                 <ul class="choose-list">
                   <% if user_signed_in? && current_user.id == post.user_id %>
                     <li>
-                      <%= link_to image_tag("destroy.png", class: "destroy-btn"), post_path(post.id), method: :delete, data: {confirm: '削除しますか？'} %>
+                      <%# <%= link_to image_tag("edit.png", class: "edit-btn"), edit_post_path(post.id) %>
+                      <%= link_to edit_post_path(post.id), class: "ed", method: :get do%>
+                        <div class="far fa-edit edit-btn"></div>
+                      <% end %>
                     </li>
                     <li>
-                      <%= link_to image_tag("edit.png", class: "edit-btn"), edit_post_path(post.id) %>
+                      <%# <%= link_to image_tag("destroy.png", class: "destroy-btn"), post_path(post.id), method: :delete, data: {confirm: '削除しますか？'} %>
+                      <%= link_to post_path(post.id), class: "de", method: :delete, data: {confirm: '削除しますか？'} do%>
+                        <div class="far fa-trash-alt destroy-btn"></div>
+                      <% end %>
                     </li>
                   <% end %>
                 </ul>
