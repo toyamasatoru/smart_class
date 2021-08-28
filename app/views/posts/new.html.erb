@@ -7,4 +7,48 @@
         <%= form.submit "SEND" %>
     <% end %>
   </div>
-</div>
+
+  <% @posts.each do |post| %>
+    <div class="post">
+      <span class="post-user-name">
+        <%= post.user.name %>
+        <div class="post-date">
+          Posted date：<%= post.created_at.strftime('%Y/%m/%d') %>
+        </div>
+        <div class="post-content">
+          <%= raw Rinku.auto_link(post.text, :all, 'target="_blank"') %>
+          <%# <%= post.text %>
+        </div>
+
+        <ul class="choose-list">
+        <span class="heart-count">
+          <%= post.likes.count %>
+        </span>
+          <% if current_user.already_liked?(post) %>
+          <li>
+            <%= link_to post_likes_path(post), method: :delete do %>
+              <div class="fas fa-heart heart"></div>
+            <% end %>
+          <% else %>
+            <%= link_to post_likes_path(post), method: :post do %>
+              <div class="far fa-heart heart2"></div>
+            <% end %>
+          <% end %>
+            </li>
+          <% if user_signed_in? && current_user.id == post.user_id %>
+          <li>
+              <%# <%= link_to image_tag("edit.png", class: "edit-btn"), edit_post_path(post.id) %>
+              <%= link_to edit_post_path(post.id), class: "ed", method: :get do%>
+                <div class="far fa-edit edit-btn"></div>
+              <% end %>
+            </li>
+            <li>
+              <%# <%= link_to image_tag("destroy.png", class: "destroy-btn"), post_path(post.id), method: :delete, data: {confirm: '削除しますか？'} %>
+              <%= link_to post_path(post.id), class: "de", method: :delete, data: {confirm: '削除しますか？'} do%>
+                <div class="far fa-trash-alt destroy-btn"></div>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+  <% end %>
