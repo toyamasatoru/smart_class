@@ -18,6 +18,7 @@ header{
   font-size: 60px;
   color : white;
   padding-left: 20px;
+  font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
 }
 
 .nav {
@@ -36,25 +37,31 @@ header{
 .login {
   text-decoration: none;
   color: white;
-  margin-right: 20px; 
+  margin-right: 20px;
+  font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
 }
 
 .sign-up {
   text-decoration: none;
   color: white;
-  margin-right: 20px; 
+  margin-right: 20px;
+  font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif; 
 }
 
 .user-name {
   text-decoration: none;
   color: white;
-  margin-right: 20px; 
+  margin-right: 20px;
+  font-size: 16pt;
+  font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
 }
 
 .logout {
   text-decoration: none;
   color: white;
-  margin-right: 20px; 
+  margin-right: 20px;
+  font-size: 16pt;
+  font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
 }
 
 .title-contents {
@@ -226,6 +233,7 @@ header{
   font-size: 1.5em;
   color: #efe2a9;
   padding-top: 10px;
+  margin-left: 10px;
 }
 
 .destroy-btn {
@@ -234,4 +242,25 @@ header{
   padding-top: 10px;
   margin-left: 20px;
   margin-right: 10px;
+}
+
+.heart {
+  font-size: 1.5em;
+  color: pink;
+  padding-top: 11px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.heart2 {
+  font-size: 1.5em;
+  color: pink;
+  padding-top: 11px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.heart-count {
+  font-size: 8pt;
+  padding-top: 20px;
+  margin-right: -16px;
 }
