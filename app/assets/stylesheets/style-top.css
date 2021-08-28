@@ -3,8 +3,21 @@
   padding: 0px;
 } */
 
-main {
+/* main {
   font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
+} */
+
+.service-title {
+  font-family: "ヒラギノ丸ゴ ProN", "Arial", "Helvetica", sans-serif;
+  font-size: 36px;
+  text-align: center;
+  color: #fff;
+  text-shadow:-1px -1px 30px #ffbf69;
+  padding-top: 20px;
+}
+
+.font-big {
+  font-size: 72px;
 }
 
 header{
@@ -13,10 +26,18 @@ header{
   /* align-items: flex-end; */
 }
 
+.smile {
+  color: white;
+  font-size: 0.5em;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
 .smart-icon {
   width: 50%;
   font-size: 60px;
   color : white;
+  padding-top: 20px;
   padding-left: 20px;
   font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
 }
@@ -37,6 +58,7 @@ header{
 .login {
   text-decoration: none;
   color: white;
+  font-size: 16pt;
   margin-right: 20px;
   font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
 }
@@ -44,6 +66,7 @@ header{
 .sign-up {
   text-decoration: none;
   color: white;
+  font-size: 16pt;
   margin-right: 20px;
   font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif; 
 }
@@ -86,7 +109,7 @@ header{
 
 .feature-lists {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .news {
@@ -103,13 +126,15 @@ header{
   width: 200px;
   height: 200px;
   margin-top: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .three-feature-texts {
   list-style-type: none;
   background-color: #fcf9ee;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   line-height: 0;
 }
 
@@ -118,24 +143,34 @@ header{
   font-size: 24px;
   padding-bottom: 20px;
   font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+  margin-left: 110px;
+  margin-right: 110px;
+}
+
+.service-contents {
+  margin-bottom: 100px;
 }
 
 .contents {
   color: #5c7aff;
   font-size: 36px;
   font-family: "ヒラギノ丸ゴ ProN", sans-serif;
-  margin-left: 10px;
-  font-weight: bold;
+  margin-left: 140px;
+  margin-top: 30px;
+  font-weight: bolder;
 }
 
 .quiz {
   color: #ffbf69;
   font-size: 24px;
   font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+  padding-left: 200px;
 }
 
 .quiz-lists {
   list-style-type: none;
+  padding-left: 220px;
+  font-size: 18px;
 }
 
 .quiz-list {
@@ -146,10 +181,13 @@ header{
   color: #ffbf69;
   font-size: 24px;
   font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+  padding-left: 200px;
 }
 
 .print-lists {
   list-style-type: none;
+  padding-left: 220px;
+  font-size: 18px;
 }
 
 .print-list {
@@ -160,11 +198,18 @@ header{
   color: #ffbf69;
   font-size: 24px;
   font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+  padding-left: 200px;
 }
 
 .post-page {
   text-decoration: none;
-  margin-left: 40px;
+  /* margin-left: 40px; */
+  padding-left: 220px;
+  font-size: 18px;
+}
+
+footer {
+  font-size: 0;
 }
 
 .footer-contents {
@@ -175,92 +220,5 @@ header{
   padding: 20px;
   font-family: "ヒラギノ丸ゴ ProN", sans-serif;
   font-weight: bold;
-}
-
-.post{
-  border: 1px solid;
-  width: 80%;
-  height: 80px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-left: 10px;
-  border-radius: 5px;
-}
-
-.post-date{
-  color: gray;
-  font-size: 8px;
-}
-
-.post-user-name {
-  color: #5c7aff;
-  font-size: 16px;
-  margin-bottom: 3px;
-}
-
-.post-content {
-  color: #333333;
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-.choose-list {
-  /* background-color: red; */
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
-  /* display: inline-block; */
-  /* justify-content: flex-end; */
-}
-
-/* .destroy-btn {
-  background-color: red;
-  width: 15%;
-  height: auto;
-  padding-top: 5px;
-}
-
-.edit-btn {
-  background-color: red;
-  width: 15%;
-  height: auto;
-  padding-top: 5px;
-} */
-
-.edit-btn {
-  font-size: 1.5em;
-  color: #efe2a9;
-  padding-top: 10px;
-  margin-left: 10px;
-}
-
-.destroy-btn {
-  font-size: 1.5em;
-  color: lightgray;
-  padding-top: 10px;
-  margin-left: 20px;
-  margin-right: 10px;
-}
-
-.heart {
-  font-size: 1.5em;
-  color: pink;
-  padding-top: 11px;
-  margin-left: 20px;
-  margin-right: 10px;
-}
-
-.heart2 {
-  font-size: 1.5em;
-  color: pink;
-  padding-top: 11px;
-  margin-left: 20px;
-  margin-right: 10px;
-}
-.heart-count {
-  font-size: 8pt;
-  padding-top: 20px;
-  margin-right: -16px;
+  font-size: 20px;
 }

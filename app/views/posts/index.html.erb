@@ -12,12 +12,12 @@
         <h2 class='service-title'>
           <span class="font-big">考える力</span>ぐんぐん伸びる!?
         </h2>
-        <p class='service-explain'>
+        <%# <p class='service-explain'>
           気軽にクイズにチャレンジ!!!
         </p>
         <p class='service-explain'>
           プリントDL無制限!!!
-        </p>
+        </p> %>
       </div>
 
       <p class="news">
@@ -56,81 +56,37 @@
 
       <div class="contents">CONTENTS
       </div>
-      <h3 class="quiz">選択クイズ</h3>
-      <ul class="quiz-lists">
-        <li>
-          <a class="quiz-list" href="/Users/satorutooyama/original/smart_class/app/javascript/quiz_test.html">クイズその１</a>
-        </li>
-        <li>
-          <a class="quiz-list" href="#">クイズその２</a>
-        </li>
-      </ul>
-      
-      <h3 class="print">プリントダウンロード</h3>
-      <ul class="print-lists">
-        <li>
-          <%# <a class="print-list" href="#">きまりの問題</a> %>
-          <%= link_to 'きそくを考えよう', '/regularity1.pdf', target: :_blank %>
-        </li>
-        <li>
-          <%# <a class="print-list" href="#">同じ重さにしよう</a> %>
-          <%= link_to '同じ重さにしよう①', '/same_game1.pdf', target: :_blank %>
-        </li>
-        <li>
-          <%# <a class="print-list" href="#">同じ重さにしよう</a> %>
-          <%= link_to '同じ重さにしよう②', '/seesaw1.pdf', target: :_blank %>
-        </li>
-      </ul>
-      <h3 class="information-ex">情報POST</h3>
-          <% if user_signed_in? %>
-            <%= link_to "新規投稿ページへ", new_post_path, class: "post-page" %>
-          <% else %>
-            <%= link_to "新規投稿ページへは、まずログイン", new_user_session_path, class: "post-page" %>
-          <% end %>
-          <% @posts.each do |post| %>
-            <div class="post">
-              <span class="post-user-name">
-                <%= post.user.name %>
-                <div class="post-date">
-                  Posted date：<%= post.created_at.strftime('%Y/%m/%d') %>
-                </div>
-                <div class="post-content">
-                  <%= raw Rinku.auto_link(post.text, :all, 'target="_blank"') %>
-                  <%# <%= post.text %>
-                </div>
 
-                <ul class="choose-list">
-                <span class="heart-count">
-                  <%= post.likes.count %>
-                </span>
-                  <% if current_user.already_liked?(post) %>
-                  <li>
-                    <%= link_to post_likes_path(post), method: :delete do %>
-                      <div class="fas fa-heart heart"></div>
-                    <% end %>
-                  <% else %>
-                    <%= link_to post_likes_path(post), method: :post do %>
-                      <div class="far fa-heart heart2"></div>
-                    <% end %>
-                  <% end %>
-                    </li>
-                  <% if user_signed_in? && current_user.id == post.user_id %>
-                  <li>
-                      <%# <%= link_to image_tag("edit.png", class: "edit-btn"), edit_post_path(post.id) %>
-                      <%= link_to edit_post_path(post.id), class: "ed", method: :get do%>
-                        <div class="far fa-edit edit-btn"></div>
-                      <% end %>
-                    </li>
-                    <li>
-                      <%# <%= link_to image_tag("destroy.png", class: "destroy-btn"), post_path(post.id), method: :delete, data: {confirm: '削除しますか？'} %>
-                      <%= link_to post_path(post.id), class: "de", method: :delete, data: {confirm: '削除しますか？'} do%>
-                        <div class="far fa-trash-alt destroy-btn"></div>
-                      <% end %>
-                    </li>
-                  <% end %>
-                </ul>
-            </div>
-          <% end %>
-    <!-- <script src=""></script> -->
-  </body>
-</html>
+      <div class="service-contents">
+        <h3 class="quiz">選択クイズ</h3>
+        <ul class="quiz-lists">
+          <li>
+            <a class="quiz-list" href="/Users/satorutooyama/original/smart_class/app/javascript/quiz_test.html">クイズ①</a>
+          </li>
+          <li>
+            <a class="quiz-list" href="#">クイズ②</a>
+          </li>
+        </ul>
+        
+        <h3 class="print">プリントダウンロード</h3>
+        <ul class="print-lists">
+          <li>
+            <%# <a class="print-list" href="#">きまりの問題</a> %>
+            <%= link_to '次にくるのはなんだ？', '/regularity1.pdf', class: "print-list", target: :_blank %>
+          </li>
+          <li>
+            <%# <a class="print-list" href="#">同じ重さにしよう</a> %>
+            <%= link_to 'やさいもんだい', '/same_game1.pdf', class: "print-list", target: :_blank %>
+          </li>
+          <li>
+            <%# <a class="print-list" href="#">同じ重さにしよう</a> %>
+            <%= link_to 'シーソーもんだい', '/seesaw1.pdf', class: "print-list",target: :_blank %>
+          </li>
+        </ul>
+        <h3 class="information-ex">教育情報POST</h3>
+            <% if user_signed_in? %>
+              <%= link_to "新規投稿ページへ", new_post_path, class: "post-page" %>
+            <% else %>
+              <%= link_to "新規投稿ページへは、まずログイン", new_user_session_path, class: "post-page" %>
+            <% end %>
+      </div>

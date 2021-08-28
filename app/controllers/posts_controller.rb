@@ -5,10 +5,17 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @posts = Post.includes(:user).order("created_at DESC")
   end
 
   def create
     @post = Post.create(post_params)
+    # @post = Post.new(post_params)
+    # if @post.save
+    #   redirect_to new_post_path
+    # else
+    #   render :index
+    # end
   end
 
   def destroy
@@ -19,6 +26,9 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    unless @post.user_id == current_user.id
+      redirect_to action: :index
+    end
   end
 
   def update
