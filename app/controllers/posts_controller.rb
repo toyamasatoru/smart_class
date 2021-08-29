@@ -41,6 +41,9 @@ class PostsController < ApplicationController
     end
   end
 
+  def quiz
+  end
+
   private
 
   def post_params

@@ -62,6 +62,7 @@
         <ul class="quiz-lists">
           <li>
             <a class="quiz-list" href="/Users/satorutooyama/original/smart_class/app/javascript/quiz_test.html">クイズ①</a>
+            <%= link_to 'クイズです', quiz_posts_path %>
           </li>
           <li>
             <a class="quiz-list" href="#">クイズ②</a>
@@ -87,6 +88,6 @@
             <% if user_signed_in? %>
               <%= link_to "新規投稿ページへ", new_post_path, class: "post-page" %>
             <% else %>
-              <%= link_to "新規投稿ページへは、まずログイン", new_user_session_path, class: "post-page" %>
+              <%= link_to "ログインしてください", new_user_session_path, class: "post-page" %>
             <% end %>
       </div>
