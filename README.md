@@ -13,6 +13,7 @@
 ### Association
 
 - has_many :posts
+- has_many :likes
 
 ##posts テーブル
 
@@ -22,5 +23,17 @@
 | user                  | references | null: false, foreign_key: true |
 
 ### Association
-
 - belongs_to :user
+- has_many :likes
+
+##likes テーブル
+
+| Column                | Type       | Options                        |
+| --------------------- | ---------- | ------------------------------ |
+| user                  | text       | null: false                    |
+| post                  | references | null: false, foreign_key: true |
+
+### Association
+
+  belongs_to :user
+  belongs_to :post

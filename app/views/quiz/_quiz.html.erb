@@ -1,0 +1,98 @@
+<script>
+  const quiz = [
+    {
+      question:'くびがながいのはどちらですか？',
+      answers:[
+        'ぞう',
+        'きりん'
+      ],
+      correct: 'きりん'
+    },{
+      question:'さくらのきせつはどちらですか？',
+      answers:[
+        '春',
+        '冬'
+      ],
+      correct: '春'
+    },{
+      question:'野菜はどちらですか？',
+      answers:[
+        'トマト',
+        'いちご'
+      ],
+      correct: 'トマト'
+    },{
+      question:'「なつ」という漢字はどちらですか？',
+      answers:[
+        '夏',
+        '秋'
+      ],
+      correct: '夏'
+    },{
+      question:'たまごから生まれるのはどちらですか？',
+      answers:[
+        'ひよこ',
+        'うま'
+      ],
+      correct: 'ひよこ'
+    },
+  ];
+  const quizLength = quiz.length;
+  let quizIndex = 0;
+
+
+  // const question = 'ぞうとさんまはどちらが大きいですか？';
+  // const answers = [
+  //   'ぞう',
+  //   'さんま'
+  // ];
+  // const correct = 'ぞう';
+
+  document.getElementById('test-question').textContent = quiz[quizIndex].question;
+
+  document.getElementsByTagName('button')[0].textContent = quiz[quizIndex].answers[0];
+  document.getElementsByTagName('button')[1].textContent = quiz[quizIndex].answers[1];
+
+  //正解判定
+  document.getElementsByTagName('button')[0].addEventListener('click', (e) =>{
+    if(quiz[quizIndex].correct === e.target.textContent){
+      window.alert('おめでとう！');
+    }else{
+      window.alert('ざんねん！');
+    }
+
+  //解答から次の問題へ遷移
+    quizIndex++;
+
+    if(quizIndex < quizLength){
+      document.getElementById('test-question').textContent = quiz[quizIndex].question;
+
+      document.getElementsByTagName('button')[0].textContent = quiz[quizIndex].answers[0];
+      document.getElementsByTagName('button')[1].textContent = quiz[quizIndex].answers[1];
+
+    }else{
+      window.alert('よくがんばりました！トップページに戻りましょう')
+    }
+  });
+
+  document.getElementsByTagName('button')[1].addEventListener('click', (e) =>{
+    if(quiz[quizIndex].correct === e.target.textContent){
+      window.alert('おめでとう！');
+    }else{
+      window.alert('ざんねん！');
+    }
+
+    quizIndex++;
+
+    if(quizIndex < quizLength){
+      document.getElementById('test-question').textContent = quiz[quizIndex].question;
+
+      document.getElementsByTagName('button')[0].textContent = quiz[quizIndex].answers[0];
+      document.getElementsByTagName('button')[1].textContent = quiz[quizIndex].answers[1];
+
+    }else{
+      window.alert('よくがんばりました！')
+    }
+  });
+
+</script>

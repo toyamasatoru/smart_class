@@ -16,7 +16,7 @@
           Posted date：<%= post.created_at.strftime('%Y/%m/%d') %>
         </div>
         <div class="post-content">
-          <%= raw Rinku.auto_link(post.text, :all, 'target="_blank"') %>
+          <%= raw Rinku.auto_link(simple_format(post.text), :all, 'target="_blank"') %>
           <%# <%= post.text %>
         </div>
 
@@ -52,3 +52,4 @@
         </ul>
     </div>
   <% end %>
+</div>

@@ -1,23 +1,39 @@
-header{
+/* header{
   height: 50px;
   width: 80%;
   font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
   font-size: 36px;
   font-weight: bold;
   color: #7a28cb;
+} */
+
+.quiz-main {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+  color: #333333;
 }
+
+.quiz-title {
+  font-size: 24pt;
+  color: #5c7aff;
+  margin-top: 20px;
+}
+
 .question {
   height: 250px;
-  /* width: 100%; */
   background-color: #f8f3dd;
   display: flex;
   justify-content: space-around;
+  margin: 0 auto;
   align-items: center;
+  font-size: 18pt;
 }
 
 .answers {
   padding: 30px;
   margin-top: 20px;
+  text-align: center;
   /* display: flex;
   justify-content: space-around;
   align-items: center; */
@@ -25,10 +41,26 @@ header{
 
 .answer-true{
   margin: 10px 30px 10px;
+  font-size: 24pt;
+  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
 }
 
 .answer-false{
   margin: 10px 30px 10px;
+  font-size: 24pt;
+  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+}
+
+.answer-true1{
+  margin: 10px 30px 10px;
+  font-size: 24pt;
+  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+}
+
+.answer-false2{
+  margin: 10px 30px 10px;
+  font-size: 24pt;
+  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
 }
 
 button {
@@ -48,7 +80,7 @@ button {
   border: 0; /* 枠線を消す */
   transition: 0.3s; /* ホバーの変化を滑らかに */
   width: 300px;
-  height: 50px;
+  height: 80px;
 }
 
 /* ホバー時（カーソルをのせた時）の見た目 */
