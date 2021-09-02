@@ -1,10 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>smart_class</title>
-    <%# <%= link_to image_tag("title_font.png", class: "title-btn"), root_path %>
-  </head>
 
   <body>
     <div class="main">
@@ -21,7 +14,7 @@
       </div>
 
       <p class="news">
-        news 新規サイトOPEN! -2021.08.21
+        news 新規サイトOPEN! -2021.09.10
       </p>
 
       <div class="three-features">
@@ -31,63 +24,61 @@
         <ul class="feature-lists">
           <li class="list">
             <%= link_to image_tag("3315601_s.jpg", class:"list-pict") %>
+            <h3 class="feature-list-text">ひらめき</h3>
           </li>
           <!-- <h3 class="feature-list-text">考える</h3> -->
         <!-- </ul> -->
         <!-- <ul class="feature-lists"> -->
           <li class="list">
             <%= link_to image_tag("4170205_s.jpg", class:"list-pict") %>
+            <h3 class="feature-list-text">じっくり</h3>
           </li>
           <!-- <h3 class="feature-list-text">復習する</h3> -->
         <!-- </ul> -->
         <!-- <ul class="feature-lists"> -->
           <li class="list">
             <%= link_to image_tag("2550975_s.jpg", class:"list-pict") %>
+            <h3 class="feature-list-text">できた！</h3>
           </li>
           <!-- <h3 class="feature-list-text">わかる！</h3> -->
         <!-- </ul> -->
         </ul>
-        <ul class="three-feature-texts">
-          <li><h3 class="feature-list-text">考える</h3></li>
-          <li><h3 class="feature-list-text">復習する</h3></li>
-          <li><h3 class="feature-list-text">わかる！</h3></li>
-        </ul>
       </div>
 
-      <div class="contents">CONTENTS
+      <div class="contents1">SERVICE CONTENTS
       </div>
 
       <div class="service-contents">
-        <h3 class="quiz">選択クイズ</h3>
+        <h3 class="quiz"><i class="fas fa-hand-pointer"></i> ひらめきクイズ (ひらめき + できた！）</h3>
         <ul class="quiz-lists">
           <li>
-            <a class="quiz-list" href="/Users/satorutooyama/original/smart_class/app/javascript/quiz_test.html">クイズ①</a>
-            <%= link_to 'クイズです', quiz_posts_path %>
+            <%= link_to 'どっちかな？', '/quiz', class: "quiz-list" %>
           </li>
           <li>
-            <a class="quiz-list" href="#">クイズ②</a>
+            <%= link_to 'なかまはずれをさがそう！', '/quiz2', class: "quiz-list" %>
           </li>
         </ul>
         
-        <h3 class="print">プリントダウンロード</h3>
+        <h3 class="print"><i class="fas fa-shapes print-icon"></i> じっくりプリント (じっくり + できた！)</h3>
         <ul class="print-lists">
           <li>
             <%# <a class="print-list" href="#">きまりの問題</a> %>
-            <%= link_to '次にくるのはなんだ？', '/regularity1.pdf', class: "print-list", target: :_blank %>
+            <%= link_to 'つぎはなんだ？', '/regularity1.pdf', class: "print-list", target: :_blank %>
           </li>
           <li>
             <%# <a class="print-list" href="#">同じ重さにしよう</a> %>
-            <%= link_to 'やさいもんだい', '/same_game1.pdf', class: "print-list", target: :_blank %>
+            <%= link_to 'やさいもんだい', '/same_game.pdf', class: "print-list", target: :_blank %>
           </li>
           <li>
             <%# <a class="print-list" href="#">同じ重さにしよう</a> %>
             <%= link_to 'シーソーもんだい', '/seesaw1.pdf', class: "print-list",target: :_blank %>
           </li>
         </ul>
-        <h3 class="information-ex">教育情報POST</h3>
+        <h3 class="information-ex"><i class="fas fa-comment information-ex-icon"></i> きょういくPOST (保護者情報交換）</h3>
             <% if user_signed_in? %>
               <%= link_to "新規投稿ページへ", new_post_path, class: "post-page" %>
             <% else %>
               <%= link_to "ログインしてください", new_user_session_path, class: "post-page" %>
             <% end %>
       </div>
+    </body>

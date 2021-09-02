@@ -6,14 +6,15 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap" rel="stylesheet">
+    <%#= javascript_pack_tag 'application' %>
     <script src="https://kit.fontawesome.com/70b62460f5.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
       <header class="top-page-header">
-      <div class="smart-icon"><i class="far fa-smile smile"></i></i>Smart Class</div>
+      <div class="smart-icon"><i class="far fa-smile smile"></i>Smart Class</div>
       <div class="nav">
         <ul class="list-right">
           <% if user_signed_in? %>
@@ -27,10 +28,11 @@
       </div>
     </header>
     <%= yield %>
-    <div class='footer'>
-        <p class='footer-contents'>
+    <footer class='footer'>
+        <div class='footer-contents'>
           SMART CLASS 2021
-        </p>
-    </div>
+          <%= link_to 'TOPページへ戻る', root_path, class: "footer-contents" %>
+        </div>
+    </footer>
   </body>
 </html>
