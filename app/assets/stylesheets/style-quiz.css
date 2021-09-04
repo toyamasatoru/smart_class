@@ -18,17 +18,47 @@
   font-size: 24pt;
   color: #5c7aff;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .question {
-  height: 250px;
+  height: 400px;
   background-color: #f8f3dd;
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
   align-items: center;
   font-size: 18pt;
+  /* background-image: url("1~6数える(animals).jpg");
+  background-position: center;
+  background-size: cover; */
 }
+
+.question3 {
+  height: 400px;
+  background-color: #f8f3dd;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  align-items: center;
+  font-size: 18pt;
+  background-image: url("1~6数える(animals2).jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.quiz-margin {
+  margin-top: 40px;
+}
+
+.under-question-detail {
+  margin-top: 20px;
+  margin: 0 auto;
+  text-align  : center;
+  font-size: 20pt;
+  color: #333333;
+}
+
 
 .answers {
   padding: 30px;

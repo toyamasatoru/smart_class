@@ -45,6 +45,7 @@
         </ul>
       </div>
 
+    <div class="under-layout">
       <div class="contents1">SERVICE CONTENTS
       </div>
 
@@ -56,6 +57,9 @@
           </li>
           <li>
             <%= link_to 'なかまはずれをさがそう！', '/quiz2', class: "quiz-list" %>
+          </li>
+          <li>
+            <%= link_to 'どうぶつをかぞえよう！', '/quiz3', class: "quiz-list" %>
           </li>
         </ul>
         
@@ -74,11 +78,12 @@
             <%= link_to 'シーソーもんだい', '/seesaw1.pdf', class: "print-list",target: :_blank %>
           </li>
         </ul>
-        <h3 class="information-ex"><i class="fas fa-comment information-ex-icon"></i> きょういくPOST (保護者情報交換）</h3>
-            <% if user_signed_in? %>
-              <%= link_to "新規投稿ページへ", new_post_path, class: "post-page" %>
-            <% else %>
-              <%= link_to "ログインしてください", new_user_session_path, class: "post-page" %>
-            <% end %>
+        <h3 class="information-ex"><i class="fas fa-comment information-ex-icon"></i> きょういくPOST (情報交換・共有）</h3>
+          <% if user_signed_in? %>
+            <%= link_to "新規投稿ページへ", new_post_path, class: "post-page" %>
+          <% else %>
+            <%= link_to "ログインしてください", new_user_session_path, class: "post-page" %>
+          <% end %>
       </div>
-    </body>
+    </div>
+  </body>

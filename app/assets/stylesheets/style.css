@@ -11,7 +11,7 @@ h2 {
   padding-top: 30px;
   margin: 0 auto;
   margin-bottom: 100px;
-  width: 30%;
+  width: 100%;
 }
 
 .field {
@@ -22,12 +22,82 @@ h2 {
   margin: 0 auto;
 }
 
+/*マイページ・マイページ編集*/
+
+.choose-list-pro {
+  /* background-color: red; */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  /* display: inline-block; */
+  /* justify-content: flex-end; */
+}
+
+.user-name-pro {
+  color: #5c7aff;
+  font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
+  font-size: 36pt;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -30px;
+}
+
+.choose-list-pro {
+  /* padding: 0;
+  margin: 0; */
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-edit-btn {
+  font-size: 2.5em;
+  color: #7bcaf4;
+  padding-top: 20px;
+  margin-right: 30px;
+}
+
+.new-post-btn {
+  font-size: 2.5em;
+  color: #ffbf69;
+  padding-top: 20px;
+  margin-right: 50px;
+}
+
+.user-post-show {
+  color: #ff8591;
+  font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
+  font-size: 18pt;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.user-delete {
+  color: #333333;
+  font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
+  font-size: 18pt;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.back-edit {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 18pt;
+}
+
 /*トップページ*/
 .main {
   font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
   max-width: 1000px;
   margin: 0 auto;
-  /* background-color: #fdffd6; */
+  /* background-color: #fcf9ee; */
+  /* background-color: #fdf6ed; */
+  background-color: #fdfced;
+  padding-bottom: 20px;
 }
 
 .service-title {
@@ -132,7 +202,11 @@ header {
 }
 
 .three-features {
-  background-color: #fcf9ee;
+  /* background-color: #fcf9ee; */
+  background-color: #fff;
+  border-radius: 10px; /*角丸指定*/
+  width: 96%;
+  margin:0 auto;
 }
 
 .feature-lists {
@@ -160,23 +234,31 @@ header {
 
 .three-feature-texts {
   list-style-type: none;
-  background-color: #fcf9ee;
   display: flex;
   justify-content: center;
-  line-height: 0;
+  /* line-height: 0; */
 }
 
 .feature-list-text {
   color: #79463e;
-  font-size: 24px;
+  font-size: 16pt;
   padding-bottom: 20px;
   font-family: "ヒラギノ丸ゴ ProN", sans-serif;
   margin-left: 110px;
   margin-right: 110px;
 }
 
+.under-layout {
+  background-color: #fff;
+  border-radius: 10px; /*角丸指定*/
+  width: 96%;
+  margin:0 auto;
+  margin-top: 30px;
+}
+
 .service-contents {
-  margin-bottom: 100px;
+  padding-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .contents1 {
@@ -189,15 +271,17 @@ header {
   font-weight: bold;
   width: 100%;
   text-align: center;
+  /* text-shadow:-1px -1px 30px #ffbf69; */
 }
 
 .quiz {
-  color: #ffbf69;
+  color: #ffaf47;
   background-color: #fffde8;
-  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
+  box-shadow: 0px 0px 0px 5px #fffde8;/*線の外側*/
   border: dashed 2px #ffb03f;/*破線*/
   border-radius: 9px;
   margin-left: 60px;/*はみ出ないように調整*/
+  margin-top: 20px;
   /* margin-right: 10px; */
   padding: 0.5em 0.5em 0.5em 1.2em;
   width: 40%;
@@ -229,9 +313,10 @@ header {
 }
 
 .print {
-  color: #ffbf69;
+  /* color: #ffbf69; */
+  color: #ffaf47;
   background-color: #fffde8;
-  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
+  box-shadow: 0px 0px 0px 5px #fffde8;/*線の外側*/
   border: dashed 2px #ffb03f;/*破線*/
   border-radius: 9px;
   margin-left: 60px;/*はみ出ないように調整*/
@@ -239,7 +324,7 @@ header {
   padding: 0.5em 0.5em 0.5em 1.2em;
   width: 40%;
   margin-bottom: 20px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 
@@ -264,9 +349,10 @@ header {
 }
 
 .information-ex {
-  color: #ffbf69;
+  /* color: #ffbf69; */
+  color: #ffaf47;
   background-color: #fffde8;
-  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
+  box-shadow: 0px 0px 0px 5px #fffde8;/*線の外側*/
   border: dashed 2px #ffb03f;/*破線*/
   border-radius: 9px;
   margin-left: 60px;/*はみ出ないように調整*/
@@ -274,7 +360,7 @@ header {
   padding: 0.5em 0.5em 0.5em 1.2em;
   width: 40%;
   margin-bottom: 20px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .information-ex-icon {
@@ -298,6 +384,8 @@ header {
 
 footer {
   font-size: 0;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .footer-contents {
@@ -309,8 +397,6 @@ footer {
   font-family: "ヒラギノ丸ゴ ProN", sans-serif;
   font-weight: bold;
   font-size: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 /*投稿ページ*/
@@ -331,7 +417,7 @@ form input[type="submit"] {
   font-weight: bold;
   border: 0;
   font-size: 20pt;
-  width: 60%;
+  width: 40%;
   display: block;
   margin: 0 auto;
 }
@@ -350,6 +436,9 @@ form input[type="submit"]:hover {
   font-weight: bold;
   width: 100%;
   margin: 0 auto;
+  background-color: #fdfced;
+  padding-bottom: 20px;
+  max-width: 1000px;
 }
 
 .container {
@@ -373,6 +462,7 @@ form input[type="submit"]:hover {
   padding-left: 10px;
   border-radius: 5px;
   max-width: 800px;
+  background-color: #fff;
 }
 
 .post-date{
@@ -386,6 +476,7 @@ form input[type="submit"]:hover {
   color: #5c7aff;
   font-size: 20px;
   margin-left: 10px;
+  text-decoration: none;
 }
 
 .post-content {

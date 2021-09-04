@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   end
   get '/quiz', to: 'quiz#show'
   get '/quiz2', to: 'quiz2#show'
+  get '/quiz3', to: 'quiz3#show'
 end
