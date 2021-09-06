@@ -98,6 +98,44 @@ h2 {
   font-size: 18pt;
 }
 
+.post-mypage {
+  border: 2px solid #b5e2fa;
+  width: 80%;
+  height: auto;
+  padding-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  border-radius: 5px;
+  max-width: 800px;
+  background-color: #fff;
+}
+
+.post-date-mypage {
+  color: lightgray;
+  padding-top: 10px;
+  font-size: 8px;
+  margin-left: 20px;
+}
+
+.post-user-name-mypage {
+  color: #5c7aff;
+  padding-left: 10px;
+  font-size: 20px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.post-content-mypage {
+  color: #333333;
+  font-size: 16px;
+  /* margin-top: 10px; */
+  margin-left: 20px;
+}
+
+
 /*トップページ*/
 
 .main {

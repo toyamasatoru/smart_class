@@ -31,13 +31,13 @@
     <%# end %>
 
   <% @posts.each do |post| %>
-    <div class="post">
-      <span class="post-user-name">
+    <div class="post-mypage">
+      <span class="post-user-name-mypage">
         <%= post.user.name %>
-        <div class="post-date">
+        <div class="post-date-mypage">
           Posted date：<%= post.created_at.strftime('%Y/%m/%d') %>
         </div>
-        <div class="post-content">
+        <div class="post-content-mypage">
           <%= raw Rinku.auto_link(simple_format(post.text), :all, 'target="_blank"') %>
           <%# <%= post.text %>
         </div>
