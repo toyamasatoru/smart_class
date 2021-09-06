@@ -23,6 +23,15 @@ h2 {
 }
 
 /*マイページ・マイページ編集*/
+.main-mypage {
+  font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  /* background-color: #fcf9ee; */
+  /* background-color: #fdf6ed; */
+  background-color: #fdfced;
+  padding-bottom: 20px;
+}
 
 .choose-list-pro {
   /* background-color: red; */
@@ -90,13 +99,14 @@ h2 {
 }
 
 /*トップページ*/
+
 .main {
   font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
   max-width: 1000px;
   margin: 0 auto;
   /* background-color: #fcf9ee; */
   /* background-color: #fdf6ed; */
-  background-color: #fdfced;
+  background-color: #fbf9da;
   padding-bottom: 20px;
 }
 
@@ -211,7 +221,9 @@ header {
 
 .feature-lists {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding-inline-start: 0;
+  /* justify-content: center; */
 }
 
 .news {
@@ -232,12 +244,12 @@ header {
   margin-right: 50px;
 }
 
-.three-feature-texts {
+/* .three-feature-texts {
   list-style-type: none;
   display: flex;
   justify-content: center;
-  /* line-height: 0; */
-}
+  line-height: 0;
+} */
 
 .feature-list-text {
   color: #79463e;
@@ -285,19 +297,9 @@ header {
   /* margin-right: 10px; */
   padding: 0.5em 0.5em 0.5em 1.2em;
   width: 40%;
-  margin-bottom: 20px;
-  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-top: 50px;
 }
-
-
-/* .quiz {
-  color: #ffbf69;
-  font-size: 24px;
-  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
-  padding-left: 120px;
-  margin: 0 auto;
-  margin-top: 20px;
-} */
 
 .quiz-lists {
   list-style-type: none;
@@ -310,6 +312,19 @@ header {
 .quiz-list {
   text-decoration: none;
   margin: 30px;
+  color: #fff;
+  background-color: #ffbf69;
+  /* background-color: #99e000; */
+  border-bottom: 5px solid #ccc100;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.quiz-list:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: #f9b18b;
+  border-bottom: 2px solid #ccc100;
 }
 
 .print {
@@ -323,17 +338,9 @@ header {
   /* margin-right: 10px; */
   padding: 0.5em 0.5em 0.5em 1.2em;
   width: 40%;
-  margin-bottom: 20px;
-  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-top: 70px;
 }
-
-
-/* .print {
-  color: #ffbf69;
-  font-size: 24px;
-  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
-  padding-left: 120px;
-} */
 
 .print-lists {
   list-style-type: none;
@@ -346,6 +353,18 @@ header {
 .print-list {
   text-decoration: none;
   margin: 30px;
+  color: #fff;
+  background-color: #ffbf69;
+  border-bottom: 5px solid #ccc100;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.print-list:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: #f9b18b;
+  border-bottom: 2px solid #ccc100;
 }
 
 .information-ex {
@@ -359,8 +378,8 @@ header {
   /* margin-right: 10px; */
   padding: 0.5em 0.5em 0.5em 1.2em;
   width: 40%;
-  margin-bottom: 20px;
-  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-top: 100px;
 }
 
 .information-ex-icon {
@@ -377,26 +396,40 @@ header {
 
 .post-page {
   text-decoration: none;
-  /* margin-left: 40px; */
-  padding-left: 90px;
+  margin-left: 90px;
+  /* padding-left: 90px; */
   font-size: 14pt;
+  color: #fff;
+  background-color: #ffbf69;
+  border-bottom: 5px solid #ccc100;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.post-page:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: #f9b18b;
+  border-bottom: 2px solid #ccc100;
 }
 
 footer {
-  font-size: 0;
+  /* font-size: 0; */
   max-width: 1000px;
   margin: 0 auto;
+  /* padding: 30px; */
+  /* padding-bottom: 0; */
+  text-align: center;
+  background-color: #ffdcad;
+  color: #ffffff;
+  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+  font-weight: bold;
+  font-size: 16pt;
 }
 
 .footer-contents {
-  background-color: #ffdcad;
-  height: 30px;
   color: #ffffff;
-  text-align: center;
-  padding: 20px;
-  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
+  padding: 30px;
 }
 
 /*投稿ページ*/
