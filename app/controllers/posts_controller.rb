@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @posts = Post.includes(:user).order("created_at DESC")
+    @posts = Post.includes(:user).order('created_at DESC')
   end
 
   def create
@@ -26,9 +26,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
-    unless @post.user_id == current_user.id
-      redirect_to new_post_path
-    end
+    redirect_to new_post_path unless @post.user_id == current_user.id
   end
 
   def update
