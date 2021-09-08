@@ -69,28 +69,88 @@
   align-items: center; */
 }
 
-.answer-true{
+.answer-true {
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+  margin-right: 30px;
+  margin-left: 30px;
+  /* background: #ffbf69; */
+  color: #FFF;
+  border-bottom: solid 4px #F79764;
+  border-radius: 10px;
   margin: 10px 30px 10px;
   font-size: 24pt;
   font-family: "ヒラギノ丸ゴ ProN", sans-serif;
 }
 
-.answer-false{
+.answer-true:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+.answer-true1 {
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+  margin-right: 30px;
+  margin-left: 30px;
+  /* background: #ffbf69; */
+  color: #FFF;
+  border-bottom: solid 4px #F79764;
+  border-radius: 10px;
   margin: 10px 30px 10px;
   font-size: 24pt;
   font-family: "ヒラギノ丸ゴ ProN", sans-serif;
 }
 
-.answer-true1{
+.answer-true1:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+.answer-false {
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+  margin-right: 30px;
+  margin-left: 30px;
+  /* background: #ffbf69; */
+  color: #FFF;
+  border-bottom: solid 4px #F79764;
+  border-radius: 10px;
   margin: 10px 30px 10px;
   font-size: 24pt;
   font-family: "ヒラギノ丸ゴ ProN", sans-serif;
 }
 
-.answer-false2{
+.answer-false:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+.answer-false1 {
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+  margin-right: 30px;
+  margin-left: 30px;
+  /* background: #ffbf69; */
+  color: #FFF;
+  border-bottom: solid 4px #F79764;
+  border-radius: 10px;
   margin: 10px 30px 10px;
   font-size: 24pt;
   font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+}
+
+.answer-false1:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
 }
 
 button {

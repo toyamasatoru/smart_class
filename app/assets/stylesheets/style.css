@@ -347,12 +347,12 @@ header {
   justify-content: flex-start;
 }
 
-.quiz-list {
+/* マウスオーバーで凹ます */
+/* .quiz-list {
   text-decoration: none;
   margin: 30px;
   color: #fff;
   background-color: #ffbf69;
-  /* background-color: #99e000; */
   border-bottom: 5px solid #ccc100;
   padding: 12px;
   border-radius: 10px;
@@ -360,10 +360,36 @@ header {
 
 .quiz-list:hover {
   margin-top: 3px;
+  transform: translate3d(0, 5px, 0);
   color: #fff;
   background: #f9b18b;
   border-bottom: 2px solid #ccc100;
+   box-shadow: none;
+} */
+/* マウスオーバーで凹ます */
+
+.quiz-list {
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+  margin-right: 30px;
+  margin-left: 30px;
+  background: #ffbf69;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #ccc100;
+  border-radius: 10px;
 }
+
+.quiz-list:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+.quiz-list:hover {
+  background-color: #ffca85; /* 背景色 */
+}
+
 
 .print {
   /* color: #ffbf69; */
@@ -389,21 +415,27 @@ header {
 }
 
 .print-list {
-  text-decoration: none;
-  margin: 30px;
-  color: #fff;
-  background-color: #ffbf69;
-  border-bottom: 5px solid #ccc100;
+  display: inline-block;
   padding: 12px;
+  text-decoration: none;
+  margin-right: 30px;
+  margin-left: 30px;
+  background: #ffbf69;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #ccc100;
   border-radius: 10px;
 }
 
-.print-list:hover {
-  margin-top: 3px;
-  color: #fff;
-  background: #f9b18b;
-  border-bottom: 2px solid #ccc100;
+.print-list:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
 }
+
+.print-list:hover {
+  background-color: #ffca85; /* 背景色 */
+}
+
 
 .information-ex {
   /* color: #ffbf69; */
@@ -424,18 +456,9 @@ header {
   color: #ffbf69;
 }
 
-/* .information-ex {
-  color: #ffbf69;
-  font-size: 24px;
-  font-family: "ヒラギノ丸ゴ ProN", sans-serif;
-  padding-left: 120px;
-} */
-
-
-.post-page {
+/* .post-page {
   text-decoration: none;
   margin-left: 90px;
-  /* padding-left: 90px; */
   font-size: 14pt;
   color: #fff;
   background-color: #ffbf69;
@@ -449,7 +472,32 @@ header {
   color: #fff;
   background: #f9b18b;
   border-bottom: 2px solid #ccc100;
+} */
+
+.post-page {
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+  margin-right: 30px;
+  margin-left: 30px;
+  background: #ffbf69;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #ccc100;
+  border-radius: 10px;
+  margin-left: 90px;
+  font-size: 14pt;
 }
+
+.post-page:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+.post-page:hover {
+  background-color: #ffca85; /* 背景色 */
+}
+
 
 footer {
   /* font-size: 0; */
@@ -481,7 +529,7 @@ form textarea {
   font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
 }
 
-form input[type="submit"] {
+/* form input[type="submit"] {
   background-color: #ffbf69;
   border-radius: 10px;
   color: #fff;
@@ -495,6 +543,30 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
   background-color: #f9b18b;
+} */
+
+form input[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16pt;
+  font-weight: bold;
+  width: 40%;
+  background: #ffbf69;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #ccc100;
+  border-radius: 10px;
+}
+
+form input[type="submit"]:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+form input[type="submit"]:hover {
+  background-color: #ffca85; /* 背景色 */
 }
 
 .contents {
