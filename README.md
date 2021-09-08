@@ -31,11 +31,11 @@ Smart Class
 ログイン状態時のみに、投稿ページに遷移ができます。
 
 #### クイズページ
-(https://gyazo.com/c3e0efa59ebffa0062e3bd51c7a3c666)
+(https://gyazo.com/84316c6e4f08648ea678006d07ad808c)
 選択クイズ式にしてあります。答えるとアラートが出て、次の問題に変わっていきます。
 
 #### プリントページ
-(https://gyazo.com/a3fc3293d3ba58530ffa429eefb1c80a)
+(https://gyazo.com/bc727de12730e48ee46b2a621b1d67f6)
 PDFを新規タブで表示できます。
 
 #### 投稿ページ
