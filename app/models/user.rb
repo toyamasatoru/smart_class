@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :posts
   has_many :likes, dependent: :destroy
 
+  validates :name, presence: true, length: { maximum: 20 }
+
   def already_liked?(post)
     likes.exists?(post_id: post.id)
   end
