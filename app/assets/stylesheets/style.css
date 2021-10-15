@@ -669,3 +669,11 @@ form input[type="submit"]:hover {
   padding-top: 20px;
   margin-right: -16px;
 }
+
+.error-messages {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  list-style-type: none;
+  padding-left: 100px;
+}
