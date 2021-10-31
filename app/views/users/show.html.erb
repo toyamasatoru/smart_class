@@ -2,13 +2,15 @@
   <%#= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
 
   <ul class="choose-list-pro">
-    <% if current_user.following?(@user) %>
-      <li>
-        <%= link_to "Unfollow", user_relationships_path(@user.id), method: :delete %>
+    <% unless user_signed_in? && current_user.id == @user.id %>
+      <% if current_user.following?(@user) %>
+        <li>
+          <%= link_to "フォローをはずす", user_relationships_path(@user.id), method: :delete %>
       <% else %>
-        <%= link_to "Follow", user_relationships_path(@user.id), method: :post %>
+          <%= link_to "フォローをする", user_relationships_path(@user.id), method: :post %>
+        </li>
+      <% end %>
     <% end %>
-      </li>
 
     <% if user_signed_in? && current_user.id == @user.id %>
       <li>
@@ -29,10 +31,13 @@
       <p><%= @user.name %></p>
   </div>
 
-  <% if user_signed_in? && current_user.id == @user.id %>
-  <div class="user-followers">
-      <%= link_to "フォローしている人",  user_followings_path(@user.id), method: :get %>
-  <% end %>
+
+  <div class="user-followings">
+      <%= link_to "フォロー中", user_followings_path(@user.id), method: :get %>
+  </div>
+  <div class="user-followings">
+      <%= link_to "フォロワー", user_followers_path(@user.id), method: :get %>
+  </div>
 
   <div class="user-profile-pro">
     <%#= @user.profile %>
