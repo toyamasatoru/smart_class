@@ -9,7 +9,10 @@ Smart Class
 * 教育情報の投稿
 
 # 本番環境
-https://smart-class-36407.herokuapp.com/
+https://smart-class-36407.herokuapp.com/  
+* ID:satoru
+* password:03091124
+
 ログイン情報(テスト用)
 * メールアドレス:aaa@aaa.com
 * パスワード:1212www
