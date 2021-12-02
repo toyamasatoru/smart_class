@@ -9,6 +9,7 @@ Smart Class
 * 教育情報の投稿
 
 # 本番環境
+https://smart-class-36407.herokuapp.com/
 ログイン情報(テスト用)
 * メールアドレス:aaa@aaa.com
 * パスワード:1212www
