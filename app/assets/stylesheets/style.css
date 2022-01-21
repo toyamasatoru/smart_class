@@ -142,8 +142,6 @@ h2 {
   font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
   max-width: 1000px;
   margin: 0 auto;
-  /* background-color: #fcf9ee; */
-  /* background-color: #fdf6ed; */
   background-color: #fbf9da;
   padding-bottom: 20px;
 }
@@ -528,22 +526,6 @@ form textarea {
   border-radius: 5px;
   font-family: "ヒラギノ丸ゴ ProN", Arial, Helvetica, sans-serif;
 }
-
-/* form input[type="submit"] {
-  background-color: #ffbf69;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: bold;
-  border: 0;
-  font-size: 20pt;
-  width: 40%;
-  display: block;
-  margin: 0 auto;
-}
-
-form input[type="submit"]:hover {
-  background-color: #f9b18b;
-} */
 
 form input[type="submit"] {
   display: block;
